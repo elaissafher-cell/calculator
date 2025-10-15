@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('wow.jpg');
+  background-size: 150% 150%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Smooth gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#calculator {
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  border-radius: 20px;
+  max-width: 1000px; /* smaller width */
+  max-height: auto;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+#display {
+  width: 100%;
+  padding: 15px; /* smaller padding */
+  font-size: 2rem; /* slightly smaller font */
+  text-align: right;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #4a4a4a;
+  border-bottom: 2px solid #dec2cb;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px; /* smaller spacing */
+  padding: 20px; /* smaller padding */
+}
+
+button {
+  width: 70px;  /* smaller button size */
+  height: 70px;
+  border-radius: 20px;
+  border: none;
+  background-color: #c5b9cd;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: #abb1cf;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #92a8d1;
+  transform: scale(0.98);
+}
+
+.operator-btn {
+  background-color: #f7cac9;
+  color: #4a4a4a;
+}
+
+.operator-btn:hover {
+  background-color: #dec2cb;
+}
+
+.operator-btn:active {
+  background-color: #c5b9cd;
+}
